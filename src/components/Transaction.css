@@ -1,0 +1,110 @@
+.transaction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(2, 0, 36, 0.8);
+    padding: 5%;
+    height: 100vh;
+  }
+  
+  .transaction-box {
+    background-color: #1b263b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .qr-container {
+    text-align: center;
+  }
+  
+  .qr-image-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .qr-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00b09b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .copy-text {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .copy-icon {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .dial-button {
+    background-color: #3498db;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .instruction-text {
+    color: #f1f1f1;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .button {
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .message {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .lowertext {
+    color: #f1f1f1;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .uppertext {
+    color: yellow;
+    font-size: 16px;
+  }
+  

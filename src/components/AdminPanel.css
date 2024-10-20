@@ -1,0 +1,82 @@
+.admin-panel {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-item {
+    background-color: #f3ce09;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .user-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .user-detail {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .view-details-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admin-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .submit-button {
+    background-color: #f3ce09;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .error-text {
+    color: red;
+  }
+  
+  .logout-button {
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .preview-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+  
+  .scrollable-list {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
