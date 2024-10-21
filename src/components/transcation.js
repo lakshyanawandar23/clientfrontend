@@ -13,7 +13,7 @@ const Transaction = () => {
   const [phoneNumber] = useState("+919256935027");
 
   const shareToWhatsApp = async () => {
-    const message = "Hello, this is a test message!";
+    const message = "Hello, Please put my order!";
     const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
     try {
@@ -39,7 +39,7 @@ const Transaction = () => {
   };
 
   const chatToNumber = () => {
-    const message = "Hello, I need assistance with my transaction.";
+    const message = "Hello, Please share your details.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
