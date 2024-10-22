@@ -10,26 +10,34 @@ const Transaction = () => {
   );
   const [message, setMessage] = useState(""); // State for message
   const [messageColor, setMessageColor] = useState(""); // State for message color
-  const [phoneNumber] = useState("+919256935027");
+  const phoneNumber = "+919256935027";
 
-  const shareToWhatsApp = async () => {
-    const message = "Hello, Please put my order!";
-    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  const shareToWhatsApp = () => {
+  //   const message = "Hello, Please put my order!";
+  //   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  //   message)}`;
+  //  // const url = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
+  //  window.open(url,"_blank");
+   const message = "Hello, Please put my orders.";
+   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+     message
+   )}`;
 
-    try {
-      window.open(url, "_blank");
-      setMessage("Message shared successfully!");
-      setMessageColor("green");
-    } catch (error) {
-      console.error("Error sharing to WhatsApp", error);
-      setMessage("Error sharing to WhatsApp");
-      setMessageColor("red");
-    }
+   window.open(url, "_blank");
+    // try {
+    //   window.open(url, "_blank");
+    //   setMessage("Message shared successfully!");
+    //   setMessageColor("green");
+    // } catch (error) {
+    //   console.error("Error sharing to WhatsApp", error);
+    //   setMessage("Error sharing to WhatsApp");
+    //   setMessageColor("red");
+    // }
 
-    // Clear message after a delay for better user experience
-    setTimeout(() => {
-      setMessage("");
-    }, 3000);
+    // // Clear message after a delay for better user experience
+    // setTimeout(() => {
+    //   setMessage("");
+    // }, 3000);
   };
 
   const copyToClipboard = (id) => {
