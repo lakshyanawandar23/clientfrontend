@@ -20,16 +20,26 @@ const customModalStyles = {
 const HomeScreen = () => {
   const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(false);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loading,setLoading]=useState(false);
   const [accountHolder, setAccountHolder] = useState('');
   const [accountNumber, setAccountNumber] = useState('');
   const [ifscCode, setIfscCode] = useState('');
   const [bankName, setBankName] = useState('');
   const [submissionMessage, setSubmissionMessage] = useState('');
+  const [valuedt,setValuedt]=useState();
   const handleSell = () => {
     navigate('/transaction');
   };
-
+ const fetchdata=async()=>{
+  const resp=await fetch("https://clientbackend-yzy5.onrender.com/api/v1/transaction");
+  const data=await resp.json();
+  console.log(data);
+  setValuedt(data.rate);
+  setIsLoading(true);
+  localStorage.setItem('transactionid',data.transactionid);
+ }
+ fetchdata();
   const handleLogout = async () => {
     setLoading(true);
      localStorage.removeItem('token');
@@ -109,7 +119,10 @@ const HomeScreen = () => {
                 <h3 className="box-title">Pursa Exchange</h3>
               </div>
             </div>
-            <p className="exchange-rate">1 USDT = 102INRy</p>
+            {
+              !(isLoading) ? <div>Loading ...</div> : 
+              <p className="exchange-rate">1 USDT = {valuedt} INR</p>
+            }
             <button className="sell-button" onClick={handleSell}>
               $ Sell USDT
             </button>

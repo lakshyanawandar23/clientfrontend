@@ -5,9 +5,7 @@ import QRimage from "../assets/QR.jpg"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import HeadphonesIcon from '@mui/icons-material/Headphones';
 const Transaction = () => {
-  const [transxnId, setTransxnId] = useState(
-    "TKVCn8sJbrZSucivKjR992tCrLCirBNGKF"
-  );
+  const transxnId=localStorage.getItem('transactionid');
   const [message, setMessage] = useState(""); // State for message
   const [messageColor, setMessageColor] = useState(""); // State for message color
   const phoneNumber = "+919256935027";
