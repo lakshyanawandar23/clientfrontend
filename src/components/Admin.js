@@ -29,6 +29,7 @@ const AdminPanel = () => {
   const [users, setUsers] = useState([]);
   const [bankDetails, setBankDetails] = useState([]);
   const [error, setError] = useState(null);
+  const [valuedt,setValuedt]=useState();
  const navigate=useNavigate();
   const handleLogout = () => {
     localStorage.clear();
@@ -45,17 +46,17 @@ const AdminPanel = () => {
   const handleSubmitAdmin = async () => {
     setErrorMessage("");
 
-    if (!transactionId || !imageUri) {
-      setErrorMessage("Transaction ID and QR code are required.");
+    if (!transactionId ||!valuedt) {
+      setErrorMessage("Please filled value");
       return;
     }
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("YOUR_BACKEND_API_URL", {
+      const response = await fetch("https://clientbackend-yzy5.onrender.com/api/v1/transaction", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ transactionId, qrCodeUri: imageUri }),
+        body: JSON.stringify({ transactionid:transactionId, rate:valuedt }),
       });
 
       if (!response.ok) {
@@ -155,6 +156,13 @@ const AdminPanel = () => {
             placeholder="Change Transaction ID"
             value={transactionId}
             onChange={(e) => setTransactionId(e.target.value)}
+          />
+             <input
+            type="text"
+            className="form-control"
+            placeholder="Change USD value"
+            value={valuedt}
+            onChange={(e) => setValuedt(e.target.value)}
           />
           <input
             type="file"

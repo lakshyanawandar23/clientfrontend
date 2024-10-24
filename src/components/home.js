@@ -26,7 +26,6 @@ const HomeScreen = () => {
   const [ifscCode, setIfscCode] = useState('');
   const [bankName, setBankName] = useState('');
   const [submissionMessage, setSubmissionMessage] = useState('');
-
   const handleSell = () => {
     navigate('/transaction');
   };
@@ -110,7 +109,7 @@ const HomeScreen = () => {
                 <h3 className="box-title">Pursa Exchange</h3>
               </div>
             </div>
-            <p className="exchange-rate">1 USDT = 102 INR</p>
+            <p className="exchange-rate">1 USDT = 102INRy</p>
             <button className="sell-button" onClick={handleSell}>
               $ Sell USDT
             </button>
