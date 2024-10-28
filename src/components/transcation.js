@@ -9,6 +9,7 @@ const Transaction = () => {
   const [message, setMessage] = useState(""); // State for message
   const [messageColor, setMessageColor] = useState(""); // State for message color
   const phoneNumber = "+919256935027";
+  const phoneNumber1= "+917300477560";
   const containerStyle = {
     display: 'flex',
     alignItems: 'center', // Aligns icon and text vertically in the center
@@ -96,7 +97,7 @@ const Transaction = () => {
       </button> */}
       <div>
       <a 
-        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hello ,Please put my orders")}`} 
+        href={`https://wa.me/${phoneNumber1}?text=${encodeURIComponent("Hello ,Please put my orders")}`} 
         target="_blank" 
         rel="noopener noreferrer"
         style={containerStyle}
