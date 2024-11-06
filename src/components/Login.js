@@ -49,7 +49,7 @@ const LoginScreen = () => {
         setPassword("");
         setAddress("");
         setLogin(true);
-        navigate("/login");
+        navigate("/");
       } else {
         setErrorMessage(data || "Registration failed. Please try again.");
       }
