@@ -9,7 +9,7 @@ const Transaction = () => {
   const [message, setMessage] = useState(""); // State for message
   const [messageColor, setMessageColor] = useState(""); // State for message color
   const phoneNumber = "+919256935027";
-  const phoneNumber1= "+917300477560";
+  const phoneNumber1= "+919220453825";
   const containerStyle = {
     display: 'flex',
     alignItems: 'center', // Aligns icon and text vertically in the center
